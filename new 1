@@ -1,0 +1,7 @@
+from pyspark import SparkContext
+from pyspark.sql import HiveContext
+from pyspark.sql import SQLContext
+conn = HiveContext(sc)
+print('le json')
+df = conn.read.json("")
+df.show()
